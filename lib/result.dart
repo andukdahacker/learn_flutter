@@ -13,8 +13,7 @@ class Result extends StatelessWidget {
       required this.resetQuiz});
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
+    return Center(
       child: Column(
         children: [
           Text("You have completed the quiz!"),
@@ -22,6 +21,6 @@ class Result extends StatelessWidget {
           ElevatedButton(onPressed: resetQuiz, child: Text("Retry"))
         ],
       ),
-    ));
+    );
   }
 }

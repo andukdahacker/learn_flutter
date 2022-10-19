@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
+class Question {
+  String question;
+  List<int> answers;
+  int correctAnswer;
 
-class Question extends StatelessWidget {
-  final String question;
-
-  Question(this.question);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(question);
-  }
+  Question(
+      {required this.question,
+      required this.answers,
+      required this.correctAnswer});
 }
