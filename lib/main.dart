@@ -1,23 +1,20 @@
 import "package:flutter/material.dart";
+import "package:intl/intl.dart";
+import 'package:learn_flutter/widgets/home.dart';
 
-void main() {
-  runApp(MyQuizApp());
-}
+void main() => runApp(MyApp());
 
-class MyQuizApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return MyQuizAppState();
-  }
-}
-
-class MyQuizAppState extends State<MyQuizApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(title: Text('My Expenses App')),
-          body: Text("Hello world")),
+      title: 'Personal Expenses',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+
+        // errorColor: Colors.red,
+      ),
+      home: const Home(),
     );
   }
 }
