@@ -25,7 +25,6 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
 
   @override
   void initState() {
-    // Provider.of<Products>(context).fetchAndSetProducts(); // WON'T WORK!
     // Future.delayed(Duration.zero).then((_) {
     //   Provider.of<Products>(context).fetchAndSetProducts();
     // });
@@ -103,3 +102,23 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
     );
   }
 }
+
+
+
+
+// FutureBuilder(
+//           future: Provider.of<Products>(context).fetchAndSetProducts(),
+//           builder: (context, snapshot) {
+//             if (snapshot.connectionState == ConnectionState.waiting) {
+//               return const Center(
+//                 child: CircularProgressIndicator(),
+//               );
+//             } else if (snapshot.hasError) {
+//               return const Center(
+//                 child: Text("Error"),
+//               );
+//             } else {
+//               return ProductsGrid(_showOnlyFavorites);
+//             }
+//           },
+//         )
